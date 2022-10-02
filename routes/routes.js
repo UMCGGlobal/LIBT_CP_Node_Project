@@ -13,6 +13,7 @@ router.post('/post', async (req, res) => {
         issuedDate: req.body.issuedDate,
         expireDate: req.body.expireDate,
         student: req.body.student,
+        isDelete: req.body.isDelete,
     })
 
     try {

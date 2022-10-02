@@ -28,6 +28,10 @@ const dataSchema = new mongoose.Schema({
     expireDate: {
         required: false,
         type: String
+    },
+    isDelete: {
+        required: true,
+        type: Boolean
     }
 
 
