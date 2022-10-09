@@ -26,5 +26,7 @@ database.once('connected', () => {
 })
 
 const routes = require('./routes/routes');
+const qualifications = require('./routes/qualification');
 
-app.use('/api', routes)
+app.use('/api', routes);
+app.use('/api/qualifications',qualifications);
