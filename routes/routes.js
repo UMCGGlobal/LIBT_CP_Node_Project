@@ -81,6 +81,7 @@ router.patch('/update/:id', async (req, res) => {
 
 //Delete by ID Method
 router.delete('/delete/:id', async (req, res) => {
+    console.log('check console.................')
     res.set('Access-Control-Allow-Origin', '*');
     try {
         const id = req.params.id;
