@@ -36,6 +36,20 @@ qualification.post('/post', async (req, res) => {
     }
 })
 
+
+//Get by ID Method
+qualification.get('/getOne/:id', async (req, res) => {
+    res.set('Access-Control-Allow-Origin', '*');
+    try {
+        const data = await Model.findById(req.params.id);
+        res.json(data)
+    }
+    catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+})
+
+
 // qualification.put('/update/:id', async (req, res) => {
 //     res.set('Access-Control-Allow-Origin', '*');
 //     // delete by id and create new
